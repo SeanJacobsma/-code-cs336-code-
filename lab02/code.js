@@ -1,3 +1,4 @@
+// Exercise 2.1
 function Person(name, birthdate, friends, greeting) {
     this.name = name;
     this.birthdate = birthdate;
@@ -29,3 +30,15 @@ console.log(person2);
 person3.addFrined("Larry, Moe");
 console.log(person3);
 console.log(person2.calculateAge);
+
+//Exercise 2.2
+function Student(name, birthdate, friends, greeting, studying) {
+    person.call(this, name, birthdate, friends);
+    this.greeting = "I am a student";
+    this.studying = studying;
+}
+Student.prototype = Object.create(Person.prototype);
+var skj4 = new Student("Sean", "1/18/1997", "", , "Engineering");
+console.log(skj4);
+skj4.addFriend("Moe, Larry, Curly");
+console.log(skj4);
