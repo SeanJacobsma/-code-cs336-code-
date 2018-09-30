@@ -1,0 +1,138 @@
+body {
+  font: 16px "Comic Sans MS", cursive;
+  background: url("Blue-rule.png");
+
+}
+p:before{
+    content: url("Yellow-pin.png");
+}
+p {
+  color : #00f /*blue*/;
+  clear: right;
+}
+#first {
+    clear: right;
+    font-style: italic;}
+
+strong {
+  background-color: #ddf;
+  color: #f00 /*red*/;
+  font: 200% serif;
+}
+            /*.carrot { color: orange; }*/
+.spinach {
+  color: #080 /*green*/;
+  background-color: #ddf;
+}
+body {counter-reset: headnum;}
+
+h3 {
+  text-align: left;
+  clear: left;
+}
+
+p.numbered{color: black;}
+p.numbered:before {
+  content: counter(mynum) ": ";
+  counter-increment: mynum;
+  font-weight: bold;
+}
+li{
+  list-style: lower-roman;
+  margin-bottom: 7px;
+}
+ul, #divided {
+  float: left;
+  border: 10px solid lightblue;
+  padding-right: 1em;
+}
+
+#fixed-pin {
+  position: absolute;
+  margin: 0px;
+  top: 0px;
+  right: 0px;
+}
+
+#demo-table {
+  font: 100% sans-serif;
+  background-color: #efe;
+  border-collapse: collapse;
+  empty-cells: show;
+  border: 1px solid #7a7;
+}
+
+#demo-table > caption {
+  caption-side: bottom;
+  text-align: right;
+  font-weight: bold;
+  font-size: 100%;
+  border-top: .2em solid #4ca;
+  margin-top: .5em;
+}
+
+
+/* basic shared rules */
+#demo-table th,
+#demo-table td {
+  text-align: right;
+  padding-right: .5em;
+}
+
+#demo-table th {
+  font-weight: bold;
+  padding-left: .5em;
+}
+
+
+/* header */
+#demo-table > thead > tr:first-child > th {
+  text-align: center;
+  color: blue;
+}
+
+#demo-table > thead > tr + tr > th {
+  font-style: italic;
+  color: gray;
+}
+
+/* fix size of superscript */
+#demo-table sup {
+  font-size: 75%;
+}
+
+/* body */
+#demo-table td {
+  background-color: #cef;
+  padding:.5em .5em .5em 3em;
+}
+
+#demo-table tbody th:after {
+  content: ":";
+}
+
+
+/* footer */
+#demo-table tfoot {
+  font-weight: bold;
+}
+
+#demo-table tfoot th {
+  color: blue;
+}
+
+#demo-table tfoot th:after {
+  content: ":";
+}
+
+#demo-table > tfoot td {
+  background-color: #cee;
+}
+
+#demo-table > tfoot > tr:first-child td {
+  border-top: .2em solid #7a7;
+}
+
+#demo-table tbody td {
+  border:1px solid #7a7;
+}
