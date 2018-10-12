@@ -1,0 +1,14 @@
+A.)
+The curl commands that worked were the GET, POST, PUT, and DELETE.
+the Dev Tools only work for the get requests.
+
+B.)
+error 418: IM_A_TEAPOT.
+just kidding, probably either 404: NOT_FOUND or 400: BAD_REQUEST
+
+A.)
+the forms support POST, DELETE, and PUT
+
+B.)
+it is passed back as one large chunk of data, with "=" separating the
+input name from the data, and "&" separating the data from the next name.
