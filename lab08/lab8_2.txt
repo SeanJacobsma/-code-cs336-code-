@@ -1,0 +1,32 @@
+A:
+  I:
+    The component structure breaks the application into several different
+    segments, that form the whole application. UI is composable if the
+    components work together to make a cohesive application. this is
+    important, because it allows a more fluid user experience.
+  II:
+    JSX helps react to work well by adding XML syntax into JavaScript.
+  III:
+    ReactJS is safe from XSS in that when it pulls in HTML it converts the
+    divisions into a string so it cannot be added as raw HTML
+  IV:
+    data flows from parent to child. comments are loaded by setting the state
+    to be the comment. If you want to create a new comment you change the state
+    to the value of the new comment, and it updates at the poll interval
+  V:
+    props is immutable, and state is mutable. if it is immutable, the data is
+    set and never changes, but can be altered if it is mutable.
+B:
+  I:
+    when you save the changes in the comments.json file, the data is updated
+    2 seconds later, because we used state, and set the poll interval to 2000.
+  II:
+    It does not render, because it is going to set up a poll interval, which
+    will render ever 2 seconds if things have changed.
+  III:
+    it means that new comments will be added very quickly, and have the newest
+    information, you won't submit a comment twice.
+  IV:
+    optimistic updates are hoping that they can geuss the time that you will
+    post something. If the sever rejects the comment, it will be very hard to
+    get the comment back. it must simply be retyped.
