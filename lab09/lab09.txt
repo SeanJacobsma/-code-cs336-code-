@@ -1,0 +1,18 @@
+9.1
+  a. the bundling means that less files will need to be sent, and thus should be faster.
+  b. babel converts all of the js code into a version that works with webpack.
+  c. you can, but this is not what you want to do as this really only shows that the html is working correctly
+  d. it tests every file with the .jsx follower with babel.
+
+9.2
+  a.they are now in es2015
+  b. it will load everything faster
+  c. it looks like we have about 260 modules that it loads for ./comments.json and
+     html-webpack-plugin
+
+9.3
+  a. when I make a change the dev server reacts immediately in updating the page
+      The api/comments page is not affected by the addition of the dev server.
+  b. If y0u are making a SPA it is worth it because to lets you see changes that
+     you make before you actually load them onto a running server (it would be
+     pretty bad if google went down which someone tried to update it).
