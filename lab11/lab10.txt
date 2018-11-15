@@ -1,0 +1,14 @@
+10.1.)
+  a.) MongoDB and SQL have many similarities in how they react.
+      However, MongoDB is a little more clear that SQL, but it
+      is also limited in customization because of this. MongoDB
+      is also limited in the size due to the fact that it is run on an outside server.
+  b.) Depending on the size of the database, running the server from your own computer
+      could slow your computer speed down to a crawl when the site is active.
+  c.) no there is not enough space on the database for a production server.
+
+10.2.)
+  a.) For the purposes of the lab running the development server is better, as it
+      allows for easier testing.
+  b.) It will not update the page until it is refreshed, even if the server is updated.
+  c.) noSQL, you don't need a rational database, there is just a list that needs to be stored.
