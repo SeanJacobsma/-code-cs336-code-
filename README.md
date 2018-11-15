@@ -1,1 +1,1 @@
-https://git.heroku.com/seanjacobsmacs336.git
+https://seanjacobsmacs336.herokuapp.com/
