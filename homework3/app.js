@@ -74,7 +74,7 @@ Person.prototype.compareID = function checkID(IDent){
 
 function peoplecheck(id){
   for (var i = 0; i <people.length; i++){
-    if (people[i].LoginID == id){
+    if (people[i].loginID == id){
       return people[i];
     }
   }
@@ -96,7 +96,7 @@ app.get('/people', function (req, res) {
     if (err) throw err;
 
       people = result;
-      
+
   })
   res.json(people);
 });
@@ -157,7 +157,7 @@ app.post('/people', function (req, res){
 
   var collection = db.collection('dave');
 
-  collection.insertOne({"firstname": firstname, "lastname":lastname, "LoginID": LoginID, "startDate": startDate});
+  collection.insertOne({"firstname": firstname, "lastname":lastname, "loginID": loginID, "startDate": startDate});
 
   db.collection('dave').find().toArray(function (err, result){
     if (err) throw err
@@ -174,11 +174,11 @@ app.post('/addPersonResponse', function(req, res) {
 
       var firstname= req.body.firstname;
       var lastname= req.body.lastname;
-      var LoginID= req.body.loginID;
+      var loginID= req.body.loginID;
       var startDate= req.body.startDate;
       var collection = db.collection('dave');
 
-      collection.insertOne({"firstname": firstname, "lastname":lastname, "LoginID": LoginID, "startDate": startDate});
+      collection.insertOne({"firstname": firstname, "lastname":lastname, "loginID": loginID, "startDate": startDate});
 
       db.collection('dave').find().toArray(function (err, result){
         if (err) throw err
