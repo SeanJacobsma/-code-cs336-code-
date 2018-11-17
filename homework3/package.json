@@ -1,0 +1,21 @@
+{
+  "name": "homework3",
+  "version": "1.0.0",
+  "description": "simple http exercises",
+  "author": "kvlinden",
+  "license": "ISC",
+  "scripts": {
+    "start": "kill $(pgrep node) ; node app.js &",
+    "stop": "kill $(pgrep node)"
+  },
+  "dependencies": {
+    "body-parser": "^1.15.2",
+    "cookie-parser": "^1.4.3",
+    "express": "^4.14.0",
+    "http-status-codes": "^1.0.6",
+    "mongodb": "^3.1.9"
+  },
+  "devDependencies": {
+    "nodemon": "^1.11.0"
+  }
+}

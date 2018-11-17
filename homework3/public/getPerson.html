@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+    <head>
+      <meta charset="utf-8">
+      <title>Get Person</title>
+      <!-- Not present in the tutorial. Just for basic styling. -->
+      <link rel="stylesheet" href="style.css" />
+      <script src="scriptGet.js"></script>
+      <script scr="jquery-ui/jquery.js"></script>
+      <script src="jquery-ui/jquery-ui.js"></script>
+
+    </head>
+    <body>
+      <h1 id="title">Find a Person</h1>
+      <form action="/getPersonResponse" method="post">
+        <div>
+          <label for="loginID">Login ID#:</label>
+          <input type="text" name="loginID">
+        </div>
+        <div class="button">
+          <button type="submit">Find Person</button>
+        </div>
+      </form>
+    </body>
+</html>
