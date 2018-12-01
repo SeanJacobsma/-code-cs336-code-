@@ -73,4 +73,38 @@ app.post('/api/comments', function(req, res) {
     })
 });
 
+app.get('/api/comments/:id', function(req, res) {
+    db.collection('steve').find({"id": Number(req.params.id)}).toArray(function(err, docs) {
+        if (err) throw err;
+        res.json(docs);
+    });
+});
+
+app.put('/api/comments/:id', function(req, res) {
+    var updateId = Number(req.params.id);
+    var update = req.body;
+    db.collection('steve').updateOne(
+        { id: updateId },
+        { $set: update },
+        function(err, result) {
+            if (err) throw err;
+            db.collection('steve').find({}).toArray(function(err, docs) {
+                if (err) throw err;
+                res.json(docs);
+            });
+        });
+});
+
+app.delete('/api/comments/:id', function(req, res) {
+    db.collection('steve').deleteOne(
+        {'id': Number(req.params.id)},
+        function(err, result) {
+            if (err) throw err;
+            db.collection('steve').find({}).toArray(function(err, docs) {
+                if (err) throw err;
+                res.json(docs);
+            });
+        });
+});
+
 app.use('*', express.static(APP_PATH));
