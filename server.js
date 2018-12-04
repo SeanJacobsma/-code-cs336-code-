@@ -34,9 +34,6 @@ MongoClient.connect('mongodb://cs336:' + MongoPassword + '@ds155653.mlab.com:556
     data = result;
   })
 
-  app.listen(app.get('port'), function() {
-      console.log('Server started: http://localhost:' + app.get('port') + '/');
-  })
 });
 
 app.set('port', (process.env.PORT || 3000));
@@ -56,7 +53,13 @@ app.use(function(req, res, next) {
 });
 
 app.get('/api/comments', function(req, res) {
-    res.json(data);
+    db.collection("steve").find({}).toArray(function(err, result){
+      if (err) throw err
+        data = result
+    })
+
+      res.json(data);
+
 });
 
 app.post('/api/comments', function(req, res) {
@@ -108,3 +111,7 @@ app.delete('/api/comments/:id', function(req, res) {
 });
 
 app.use('*', express.static(APP_PATH));
+
+app.listen(app.get('port'), function() {
+    console.log('Server started: http://localhost:' + app.get('port') + '/');
+});
