@@ -1,0 +1,11 @@
+13.1)
+  a.) routing improves user experience by eliminating lag among connected web pages.
+  b.) they both have their trade offs. I prefer browser history, because links are a lot easier to remember
+  c.) the default for the servers is to send hash. you have to override the default to only send data
+
+11.2)
+  a.) comment edit maintains the state of an individual comment, while comment box maintains the state of the whole list.
+  b.) the PUT and DELETE methods complete their respective handle functions changing the list, then return to it. the cancel is a link back to the page that doesn't change it's apearance.
+  c.) a link does not trigger a whole page refresh like a hyperlink would.
+
+  Heroku delopment: https://seanjacobsmacs336.herokuapp.com/
