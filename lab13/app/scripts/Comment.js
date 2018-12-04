@@ -15,7 +15,6 @@ module.exports = React.createClass({
   },
 
   render: function() {
-    var md = new Remarkable();
     return (
       <div className="comment">
         <h2 className="commentAuthor">

@@ -100,7 +100,7 @@ app.delete('/api/comments/:id', function(req, res) {
         {'id': Number(req.params.id)},
         function(err, result) {
             if (err) throw err;
-            db.collection('steve').find({}).toArray(function(err, docs) {
+            db.collection("steve").find({}).toArray(function(err, docs) {
                 if (err) throw err;
                 res.json(docs);
             });

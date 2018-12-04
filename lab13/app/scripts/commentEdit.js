@@ -48,7 +48,7 @@ module.exports = React.createClass({
             url: API_URL + "/" + this.props.params.id,
             dataType: 'json',
             type: 'PUT',
-            contentType: 'json',
+            contentType: 'application/json',
             data: JSON.stringify(updatedComment)
         })
             .done(function (comments) {
@@ -73,7 +73,7 @@ module.exports = React.createClass({
     render: function () {
         return (
             <div>
-                <form className="commentForm">
+                <form className="CommentForm">
                     <h1>Comment Edit - {this.props.params.id}</h1>
                     <input
                         type="text"
