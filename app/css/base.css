@@ -1,66 +1,168 @@
+/*COLORS*/
+/*Red & Gold*/
+:root{--color-highlight:#EDC109;--color-2:#D1DCE0;--color-3:#61787C;--color-4: #343545;--color-background:#5F3737;}html{background: url(calvin-background-red.svg) no-repeat center center fixed;}
+/*Blue & Gold*/
+/* :root{--color-highlight:#EDC109;--color-2:#D1DCE0;--color-3:#61787C;--color-4: #2C2D3A;--color-background:#37415F;}html{background:url(calvin-background-blue.svg) no-repeat center center fixed;} */
+
+/*Green & Brown*/
+/*:root{--color-highlight:#78CA40;--color-2:#E2E2D4;--color-3:#6E886F;--color-4: #544A15;--color-background: #46360A;}html{background:url(calvin-background-brown.svg) no-repeat center center fixed;}*/
+
+/*RESET*/
+* {
+    margin: 0px;
+    padding: 0px;
+    transition: .4s;
+    overflow: hidden;
+}
+/*FONT SIZE*/
 body {
-  background: #fff;
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-  font-size: 15px;
-  line-height: 1.7;
-  margin: 0;
-  padding: 30px;
+    font-size: 15px;
 }
-
-a {
-  color: #4183c4;
-  text-decoration: none;
-}
-
-a:hover {
-  text-decoration: underline;
-}
-
 code {
-  background-color: #f8f8f8;
-  border: 1px solid #ddd;
-  border-radius: 3px;
-  font-family: "Bitstream Vera Sans Mono", Consolas, Courier, monospace;
-  font-size: 12px;
-  margin: 0 2px;
-  padding: 0 5px;
+    font-size: 12px;
 }
-
-h1, h2, h3, h4 {
-  font-weight: bold;
-  margin: 0 0 15px;
-  padding: 0;
+h1, h2 {
+    font-weight: 700;
 }
-
 h1 {
-  border-bottom: 1px solid #ddd;
-  font-size: 2.5em;
+    font-size: 2.5em
 }
-
 h2 {
-  border-bottom: 1px solid #eee;
-  font-size: 2em;
+    font-size: 2em
 }
-
-h3 {
-  font-size: 1.5em;
+.DailyTaskList > h2 {
+    font-size: 1.3em
 }
-
-h4 {
-  font-size: 1.2em;
+/*LAYOUT*/
+html, body, #content, .Weekly.Calendar {
+	overflow: visible;
 }
-
-p, ul {
-  margin: 15px 0;
+body {
+	padding: 0px 10px;
 }
-
-ul {
-  padding-left: 30px;
+#content h1:first-child {
+	transform: translateY(-30px);
 }
-div.DailyTaskList {
-  display: inline;
+#content {
+    margin: 100px auto;
+    max-width: 920px;
+    padding: 10px;
 }
-div.Task {
-  padding: 1em;
-  border: solid 0.01em;
+.WeeklyCalendar {
+    display: grid;
+    grid-template-columns: auto auto auto auto auto auto auto;
+    grid-column-gap: 15px;
+    padding: 10px 5px;
+    min-height: 100px;
+}
+.Weekly.Calendar {
+	margin-top: -35px;
+}
+.Weekly.Calendar > h2 {
+	margin-bottom: 10px;
+}
+.DailyTaskList {
+	padding-left: 15px;
+}
+.Task {
+	padding: 0px 4px;
+	min-height: 17px;
+}
+.TaskForm {
+    padding-top: 10px;
+    margin: 20px auto;
+}
+.TaskForm input, .TaskForm select {
+    margin: auto;
+	margin-bottom: 10px;
+	padding: 0px 5px;
+	height: 26px;
+}
+.TaskForm :last-child {
+	padding: 4px 12px;
+}
+/*STYLES*/
+html {
+    background-color: var(--color-background);
+	background-size: cover;
+    font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+}
+body {
+    filter: drop-shadow(0px 20px 25px hsla(0,0%,0%,0.5));
+}
+a {
+    text-decoration: none;
+    color: dodgerblue;
+    transition: .3s;
+}
+a:hover {
+    color: var(--color-highlight);
+}
+h1 {
+    color: var(--color-highlight);
+    text-shadow: 0px 2px 1px var(--color-4);
+}
+h2 {
+    color: var(--color-4);
+    border-bottom: solid 2px var(--color-3);
+}
+option {
+	background: var(--color-4);
+	color: var(--color-2);
+}
+select:hover, select:active {
+	background: var(--color-highlight);
+}
+#content {
+    background: var(--color-2);
+    border-radius: 10px;
+}
+.WeeklyCalendar {
+    background: white;
+    border-radius: 8px;
+}
+.DailyTaskList:not(:first-child) {
+    border-left: dotted 1px var(--color-3);
+}
+.Task:not(:first-child) {
+    border-top: solid 1px var(--color-2);
+}
+.Task:not(:last-child) {
+    border-bottom: solid 1px var(--color-2);
+}
+.Task:nth-child(even) {
+	border: none;
+	background: var(--color-2);
+	filter: contrast(1.2);
+}
+.TaskForm {
+    margin-top: 10px;
+    border-top: solid 2px var(--color-3);
+}
+.TaskForm input, .TaskForm select {
+    background: var(--color-3);
+    background: linear-gradient(90deg, var(--color-3) 30%, var(--color-4) 200%);
+    color: var(--color-2);
+    border: solid 1px var(--color-4);
+    border-radius: 15px;
+}
+.TaskForm input:hover, .TaskForm select:hover {
+    filter: brightness(120%);
+}
+.TaskForm > :last-child {
+    background: var(--color-highlight);
+    color: var(--color-4);
+    border: none;
+    filter: brightness(100%)drop-shadow(0px 1px 1px var(--color-4));
+}
+.TaskForm > :last-child:hover {
+    filter: brightness(120%)drop-shadow(0px 1px 2px var(--color-4));
+}
+.TaskForm *::placeholder {
+ color: var(--color-2);
+ opacity: .5;
+}
+.TaskForm *::-ms-input-placeholder {
+ color: var(--color-2);
+ opacity: .5;
 }
