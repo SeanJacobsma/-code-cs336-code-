@@ -1,6 +1,6 @@
 /*COLORS*/
 /*Red & Gold*/
-:root{--color-highlight:#EDC109;--color-2:#D1DCE0;--color-3:#61787C;--color-4: #343545;--color-background:#5F3737;}/*html{background: url(calvin-background-red.svg) no-repeat center center fixed;}*/
+:root{--color-highlight:#EDC109;--color-2:#D1DCE0;--color-3:#61787C;--color-4: #343545;--color-background:#5F3737;}html{background:url(https://teapot.netlify.com/calvin-background-red.svg) no-repeat center center fixed;}
 /*Blue & Gold*/
 /* :root{--color-highlight:#EDC109;--color-2:#D1DCE0;--color-3:#61787C;--color-4: #2C2D3A;--color-background:#37415F;}html{background:url(calvin-background-blue.svg) no-repeat center center fixed;} */
 
